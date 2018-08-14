@@ -4,7 +4,7 @@
   <li>
     <input type="checkbox" onclick="return false;" <%= "checked" if task[:completed]==true  %>/>
     <%= link_to task[:title], task_path(task[:id])%>
-    <%= link_to "Delete", task_path(task[:id]), method: :delete%>
+    <%= link_to "Delete", task_path(task[:id]), method: :delete, data: { confirm: 'Are you sure?' }%>
   </li>
   <% end %>
 </ul>
